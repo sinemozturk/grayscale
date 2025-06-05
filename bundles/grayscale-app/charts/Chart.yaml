@@ -1,0 +1,5 @@
+apiVersion: v2
+name: grayscale-app
+description: A minimal Helm chart for the grayscale-app
+version: 0.1.0
+appVersion: "latest"

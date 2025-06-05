@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+bundle-dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+
+# Docker
+*.tar.gz
+
+# VSCode settings
+.vscode/
+
+# Mac system files
+Icon?
+
+# Coverage reports
+coverage/
+
+# Misc
+*.tgz
