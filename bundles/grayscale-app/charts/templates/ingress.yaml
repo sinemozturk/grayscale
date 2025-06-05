@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: poseidon-app-ingress
+  name: grayscale-app-ingress
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
     traefik.ingress.kubernetes.io/service.passhostheader: "true"
@@ -11,18 +11,18 @@ spec:
   rules:
   - http:
       paths:
-      - path: /poseidon
+      - path: /grayscale
         pathType: Prefix
         backend:
           service:
-            name: poseidon-app-service
+            name: grayscale-app-service
             port:
               number: {{ .Values.service.port }}
       # - path: /api
         # pathType: Prefix
         # backend:
         #   service:
-        #     name: poseidon-app-service
+        #     name: grayscale-app-service
         #     port:
         #       number: {{ .Values.service.port }}
 {{- end }}

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: poseidon-app
+  name: grayscale-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: poseidon-app
+      app: grayscale-app
   template:
     metadata:
       labels:
-        app: poseidon-app
+        app: grayscale-app
     spec:
       containers:  
-        - name: poseidon-app
+        - name: grayscale-app
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 80
