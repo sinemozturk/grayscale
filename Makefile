@@ -34,10 +34,10 @@ appbundle:
 	@$(DOCKER) save $(APP_NAME):latest | gzip > bundle-dist/docker-image.tar.gz
 	@mkdir -p bundle-dist/$(APP_NAME)/images
 	@mv bundle-dist/docker-image.tar.gz bundle-dist/$(APP_NAME)/images/$(APP_NAME).tar.gz
-	@echo "Packaging Helm chart..."
-	@helm package bundles/${APP_NAME}/charts
-	@mkdir -p bundle-dist/$(APP_NAME)/charts
-	@mv *.tgz bundle-dist/$(APP_NAME)/charts/
+	# @echo "Packaging Helm chart..."
+	# @helm package bundles/${APP_NAME}/charts
+	# @mkdir -p bundle-dist/$(APP_NAME)/charts
+	# @mv *.tgz bundle-dist/$(APP_NAME)/charts/
 	@echo "Generating ansible.cfg file..."
 	@echo "[defaults]" > bundle-dist/$(APP_NAME)/ansible.cfg
 	@echo "roles_path = roles" >> bundle-dist/$(APP_NAME)/ansible.cfg
