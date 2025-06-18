@@ -3,7 +3,7 @@ size: 15M
 application:
   artifact_size: ""
   name: grayscale-app
-  description: Minimal grayscale application
+  description: Minimal grayscale application for testing
   version: 0.1.0
   services:
     - name: grayscale-app
